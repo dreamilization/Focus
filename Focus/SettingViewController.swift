@@ -15,6 +15,7 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var timeFormatButton: UIButton!
     @IBOutlet weak var colorButton: UIButton!
     @IBOutlet weak var displayTutorialButton: UIButton!
+    let defaults = UserDefaults.standard;
     
     override var prefersStatusBarHidden: Bool {
         return true;
@@ -26,12 +27,11 @@ class SettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let defaults = UserDefaults.standard;
         if(defaults.bool(forKey: "isBlackBg"))
         {
             self.view.backgroundColor = UIColor.black;
-            colorButton.setTitle(defaults.bool(forKey: "isBlackBg") ? "Dark" : "Grey", for: .normal);
         }
+        colorButton.setTitle(defaults.bool(forKey: "isBlackBg") ? "Dark" : "Grey", for: .normal);
         let isTWH = defaults.bool(forKey: "isTWH");
         timeFormatButton.setTitle(isTWH ? "12-Hour" : "24-Hour", for: .normal);
         let isShowDate = defaults.bool(forKey: "isShowDate");
@@ -40,15 +40,19 @@ class SettingViewController: UIViewController {
         versionLabel.text = "Ver: " + (verNum ?? "N/A");
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func displayDateOnClick(_ sender: Any) {
+        defaults.set(!defaults.bool(forKey: "isShowDate"), forKey: "isShowDate");
+        displayDateButton.setTitle(defaults.bool(forKey: "isShowDate") ? "Displaying Date" : "Not Displaying Date", for: .normal);
     }
-    */
-
+    
+    @IBAction func timeFormatOnClick(_ sender: Any) {
+        defaults.set(!defaults.bool(forKey: "isTWH"), forKey: "isTWH")
+        timeFormatButton.setTitle(defaults.bool(forKey: "isTWH") ? "12-Hour" : "24-Hour", for: .normal);
+    }
+    
+    @IBAction func colorOnClick(_ sender: Any) {
+        defaults.set(!defaults.bool(forKey: "isBlackBg"), forKey: "isBlackBg")
+        colorButton.setTitle(defaults.bool(forKey: "isBlackBg") ? "Dark" : "Grey", for: .normal);
+    }
 }

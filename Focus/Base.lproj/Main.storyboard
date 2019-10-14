@@ -72,9 +72,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:41" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lI-Uz-ntS">
-                                <rect key="frame" x="109" y="260.5" width="157" height="76"/>
-                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="65"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09:41" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lI-Uz-ntS">
+                                <rect key="frame" x="89.5" y="260.5" width="196" height="76"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="65"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kff-sz-m1a">
+                                <rect key="frame" x="187.5" y="356.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -82,8 +88,10 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="Kff-sz-m1a" firstAttribute="centerY" secondItem="6lI-Uz-ntS" secondAttribute="bottom" constant="20" id="Hmw-2u-kYg"/>
                             <constraint firstItem="6lI-Uz-ntS" firstAttribute="centerX" secondItem="EeD-re-Lty" secondAttribute="centerX" id="OeZ-6F-M6r"/>
                             <constraint firstItem="6lI-Uz-ntS" firstAttribute="centerY" secondItem="EeD-re-Lty" secondAttribute="centerY" constant="-35" id="QMF-k9-Bfi"/>
+                            <constraint firstItem="Kff-sz-m1a" firstAttribute="centerX" secondItem="6lI-Uz-ntS" secondAttribute="centerX" id="b5L-r8-LmM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3gc-Hr-a6w"/>
                         <connections>
@@ -92,6 +100,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="c1t-mj-LBv"/>
                     <connections>
+                        <outlet property="dateLabel" destination="Kff-sz-m1a" id="nSq-Wx-543"/>
                         <outlet property="lpgRecognizor" destination="pk7-Tp-7xW" id="4j4-x5-RA6"/>
                         <outlet property="timeLabel" destination="6lI-Uz-ntS" id="mG9-PA-kom"/>
                     </connections>
@@ -139,6 +148,9 @@
                                 <state key="normal" title="Display Date">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="displayDateOnClick:" destination="FJW-PE-4qe" eventType="touchUpInside" id="K0v-vC-Vat"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygB-nv-jBH">
                                 <rect key="frame" x="23.5" y="180.5" width="173" height="43"/>
@@ -146,6 +158,9 @@
                                 <state key="normal" title="Time Format">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="timeFormatOnClick:" destination="FJW-PE-4qe" eventType="touchUpInside" id="hGi-LL-OR0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJx-vQ-ypq">
                                 <rect key="frame" x="23.5" y="258.5" width="79" height="43"/>
@@ -153,6 +168,9 @@
                                 <state key="normal" title="Color">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="colorOnClick:" destination="FJW-PE-4qe" eventType="touchUpInside" id="a21-cL-Ny5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIO-jL-eDK">
                                 <rect key="frame" x="23.5" y="336.5" width="251" height="43"/>
