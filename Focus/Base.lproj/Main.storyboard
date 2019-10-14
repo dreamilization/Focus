@@ -30,7 +30,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="onClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="egc-E1-JpB"/>
+                                    <action selector="setupButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="egc-E1-JpB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -46,6 +46,7 @@
                     <connections>
                         <outlet property="setupButton" destination="ypj-EU-XQW" id="jik-n4-Fts"/>
                         <outlet property="setupButtonConstraintY" destination="dkq-Po-FdC" id="h37-mR-AVg"/>
+                        <outlet property="splashScreen" destination="8bC-Xf-vdC" id="p62-iO-JOb"/>
                         <outlet property="splashTitle" destination="eXK-PP-s47" id="hLK-Xt-9sW"/>
                         <outlet property="splashTitleConstraintY" destination="XAE-H0-kuj" id="A7U-22-lzF"/>
                     </connections>

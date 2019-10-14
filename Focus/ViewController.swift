@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var splashTitleConstraintY: NSLayoutConstraint!
     @IBOutlet weak var setupButton: UIButton!
     @IBOutlet weak var setupButtonConstraintY: NSLayoutConstraint!
+    @IBOutlet var splashScreen: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,13 +40,14 @@ class ViewController: UIViewController {
             })
         }
     }
-    
-    
 
-    @IBAction func onClick(_ sender: UIButton) {
+    @IBAction func setupButtonOnClick(_ sender: UIButton) {
         setupButton.isEnabled = false;
-        //TODO: Switch to the setup scene.
+        UIView.animate(withDuration: 0.75, delay: 0.25, animations: {
+            self.splashScreen.alpha = 0;
+        }, completion: { (finished: Bool) in
+            //TODO: Switch to the setup scene.
+        })
     }
     
 }
-
