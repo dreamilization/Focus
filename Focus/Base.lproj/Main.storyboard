@@ -33,6 +33,12 @@
                                     <action selector="setupButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="egc-E1-JpB"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple, Reimaged" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6E-r4-O2m">
+                                <rect key="frame" x="125" y="463" width="164" height="20"/>
+                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
@@ -40,6 +46,8 @@
                             <constraint firstItem="eXK-PP-s47" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-15" id="XAE-H0-kuj"/>
                             <constraint firstItem="ypj-EU-XQW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dkq-Po-FdC"/>
                             <constraint firstItem="eXK-PP-s47" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lVf-OZ-bGQ"/>
+                            <constraint firstItem="C6E-r4-O2m" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="25" id="vUL-Y9-0lr"/>
+                            <constraint firstItem="C6E-r4-O2m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wXg-3y-YB2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -49,6 +57,7 @@
                         <outlet property="splashScreen" destination="8bC-Xf-vdC" id="p62-iO-JOb"/>
                         <outlet property="splashTitle" destination="eXK-PP-s47" id="hLK-Xt-9sW"/>
                         <outlet property="splashTitleConstraintY" destination="XAE-H0-kuj" id="A7U-22-lzF"/>
+                        <outlet property="splashWelcome" destination="C6E-r4-O2m" id="Lat-tj-vM4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
