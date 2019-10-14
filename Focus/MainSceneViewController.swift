@@ -9,6 +9,8 @@
 import UIKit
 
 class MainSceneViewController: UIViewController {
+    @IBOutlet var lpgRecognizor: UILongPressGestureRecognizer!
+    @IBOutlet weak var timeLabel: UILabel!
     
     override var prefersStatusBarHidden: Bool {
         return true;
@@ -26,7 +28,15 @@ class MainSceneViewController: UIViewController {
         }
     }
     
-
+    
+    @IBAction func enterSetting(_ sender: UILongPressGestureRecognizer) {
+        if(sender.state == .began)
+        {
+            let setting = self.storyboard?.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController;
+            self.present(setting, animated: true, completion: nil);
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -80,31 +80,78 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6lI-Uz-ntS" firstAttribute="centerX" secondItem="EeD-re-Lty" secondAttribute="centerX" id="OeZ-6F-M6r"/>
                             <constraint firstItem="6lI-Uz-ntS" firstAttribute="centerY" secondItem="EeD-re-Lty" secondAttribute="centerY" constant="-35" id="QMF-k9-Bfi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3gc-Hr-a6w"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="pk7-Tp-7xW" appends="YES" id="nlc-C2-4AS"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="c1t-mj-LBv"/>
+                    <connections>
+                        <outlet property="lpgRecognizor" destination="pk7-Tp-7xW" id="4j4-x5-RA6"/>
+                        <outlet property="timeLabel" destination="6lI-Uz-ntS" id="mG9-PA-kom"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Otr-Sm-00B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.40000000000000002" id="pk7-Tp-7xW">
+                    <connections>
+                        <action selector="enterSetting:" destination="GQF-Rd-biO" id="hf1-be-GQz"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="149" y="814"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="zyX-se-NMo">
             <objects>
-                <viewController storyboardIdentifier="SettingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FJW-PE-4qe" customClass="SettingViewController" customModule="Focus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FJW-PE-4qe" customClass="SettingViewController" customModule="Focus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ey9-lt-zRf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Um4-L0-Cnd">
+                                <rect key="frame" x="23.666666666666671" y="63.666666666666657" width="168.66666666666663" height="41"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiV-XG-1Mn">
+                                <rect key="frame" x="337.66666666666669" y="65" width="53" height="38"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="22"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <segue destination="GQF-Rd-biO" kind="presentation" modalTransitionStyle="coverVertical" id="amG-lZ-1Un"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGX-PE-aWp">
+                                <rect key="frame" x="207" y="847" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wGX-PE-aWp" firstAttribute="centerX" secondItem="ey9-lt-zRf" secondAttribute="centerX" id="0Pq-gO-MfT"/>
+                            <constraint firstItem="wGX-PE-aWp" firstAttribute="centerY" secondItem="Cxr-bP-BKc" secondAttribute="bottom" constant="-15" id="MpB-c6-58R"/>
+                            <constraint firstItem="fiV-XG-1Mn" firstAttribute="centerY" secondItem="Cxr-bP-BKc" secondAttribute="top" constant="40" id="SIq-Uc-s7g"/>
+                            <constraint firstItem="Um4-L0-Cnd" firstAttribute="centerY" secondItem="Cxr-bP-BKc" secondAttribute="top" constant="40" id="fWS-Pq-Qx3"/>
+                            <constraint firstItem="Um4-L0-Cnd" firstAttribute="centerX" secondItem="Cxr-bP-BKc" secondAttribute="leading" constant="108" id="oaz-aN-Pu4"/>
+                            <constraint firstItem="fiV-XG-1Mn" firstAttribute="centerX" secondItem="Cxr-bP-BKc" secondAttribute="trailing" constant="-50" id="yXV-8r-wxZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Cxr-bP-BKc"/>
                     </view>
+                    <connections>
+                        <outlet property="versionLabel" destination="wGX-PE-aWp" id="Log-L1-7ts"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZhB-sp-arC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952" y="803"/>
+            <point key="canvasLocation" x="950.72463768115949" y="802.90178571428567"/>
         </scene>
         <!--Setup View Controller-->
         <scene sceneID="E5P-Aa-MSg">

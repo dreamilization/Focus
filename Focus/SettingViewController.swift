@@ -10,6 +10,8 @@ import UIKit
 
 class SettingViewController: UIViewController {
     
+    @IBOutlet weak var versionLabel: UILabel!
+    
     override var prefersStatusBarHidden: Bool {
         return true;
     }
@@ -20,8 +22,12 @@ class SettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        if(UserDefaults.standard.bool(forKey: "isBlackBg"))
+        {
+            self.view.backgroundColor = UIColor.black;
+        }
+        let verNum = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String;
+        versionLabel.text = "Ver: " + (verNum ?? "N/A");
     }
     
 
