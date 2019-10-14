@@ -10,11 +10,12 @@ import UIKit
 
 class SetupViewController: UIViewController {
 
+    @IBOutlet weak var titleDisplay: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let defaults = UserDefaults.standard;
-        defaults.set(true, forKey: "launchedBefore");
+        defaults.set(false, forKey: "launchedBefore");
     }
     
 

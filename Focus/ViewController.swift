@@ -46,12 +46,12 @@ class ViewController: UIViewController {
 
     @IBAction func setupButtonOnClick(_ sender: UIButton) {
         setupButton.isEnabled = false;
-        UIView.animate(withDuration: 0.5, delay: 0.25, animations: {
+        UIView.animate(withDuration: 0.75, delay: 0.25, animations: {
             self.splashTitle.alpha = 0;
             self.setupButton.alpha = 0;
         }, completion: { (finished: Bool) in
             let setupView = self.storyboard?.instantiateViewController(withIdentifier: "SetupViewController") as! SetupViewController;
-            self.present(setupView, animated: true, completion: nil);
+            self.present(setupView, animated: false, completion: nil);
         })
     }
     
