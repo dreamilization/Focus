@@ -159,6 +159,13 @@
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIO-jL-eDK">
+                                <rect key="frame" x="23.666666666666657" y="380.66666666666669" width="250.99999999999997" height="43"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="26"/>
+                                <state key="normal" title="Display Tutorial">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
@@ -168,8 +175,10 @@
                             <constraint firstItem="eJx-vQ-ypq" firstAttribute="top" secondItem="ygB-nv-jBH" secondAttribute="bottom" constant="35" id="88y-hJ-Ssx"/>
                             <constraint firstItem="ygB-nv-jBH" firstAttribute="leading" secondItem="Um4-L0-Cnd" secondAttribute="leading" id="AaG-G5-biX"/>
                             <constraint firstItem="eJx-vQ-ypq" firstAttribute="leading" secondItem="QUP-O5-FlK" secondAttribute="leading" id="H9a-nl-Eno"/>
+                            <constraint firstItem="XIO-jL-eDK" firstAttribute="leading" secondItem="ygB-nv-jBH" secondAttribute="leading" id="LmS-48-biX"/>
                             <constraint firstItem="wGX-PE-aWp" firstAttribute="centerY" secondItem="Cxr-bP-BKc" secondAttribute="bottom" constant="-15" id="MpB-c6-58R"/>
                             <constraint firstItem="Um4-L0-Cnd" firstAttribute="centerY" secondItem="Cxr-bP-BKc" secondAttribute="top" constant="40" id="fWS-Pq-Qx3"/>
+                            <constraint firstItem="XIO-jL-eDK" firstAttribute="top" secondItem="eJx-vQ-ypq" secondAttribute="bottom" constant="35" id="jQ2-Px-Z1P"/>
                             <constraint firstItem="fiV-XG-1Mn" firstAttribute="centerY" secondItem="Cxr-bP-BKc" secondAttribute="top" constant="43" id="l5a-1g-SAP"/>
                             <constraint firstItem="ygB-nv-jBH" firstAttribute="top" secondItem="Um4-L0-Cnd" secondAttribute="bottom" constant="120" id="lci-lK-cXm"/>
                             <constraint firstItem="ygB-nv-jBH" firstAttribute="top" secondItem="QUP-O5-FlK" secondAttribute="bottom" constant="35" id="lk9-GM-MoD"/>
