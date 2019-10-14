@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,16 +12,16 @@
             <objects>
                 <viewController storyboardIdentifier="SplashScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="Focus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXK-PP-s47">
-                                <rect key="frame" x="152.66666666666666" y="411.66666666666669" width="108.99999999999997" height="43"/>
+                                <rect key="frame" x="132" y="296.5" width="111" height="44"/>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="shadowOffset" width="1" height="1"/>
+                                <size key="shadowOffset" width="2" height="2"/>
                             </label>
                             <button opaque="NO" alpha="0.0" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypj-EU-XQW">
                                 <rect key="frame" x="161" y="419" width="93" height="58"/>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple, Reimaged" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6E-r4-O2m">
-                                <rect key="frame" x="125" y="463" width="164" height="20"/>
+                                <rect key="frame" x="105.5" y="348.5" width="164" height="20"/>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -69,11 +69,11 @@
             <objects>
                 <viewController storyboardIdentifier="MainSceneViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GQF-Rd-biO" customClass="MainSceneViewController" customModule="Focus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EeD-re-Lty">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:41" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lI-Uz-ntS">
-                                <rect key="frame" x="128.66666666666666" y="375" width="156.99999999999997" height="76"/>
+                                <rect key="frame" x="109" y="260.5" width="157" height="76"/>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="65"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -110,17 +110,17 @@
             <objects>
                 <viewController storyboardIdentifier="SettingViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FJW-PE-4qe" customClass="SettingViewController" customModule="Focus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ey9-lt-zRf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Um4-L0-Cnd">
-                                <rect key="frame" x="23.666666666666671" y="63.666666666666657" width="169" height="41"/>
+                                <rect key="frame" x="23.5" y="19.5" width="169" height="41"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiV-XG-1Mn">
-                                <rect key="frame" x="337.66666666666669" y="68" width="53" height="38"/>
+                                <rect key="frame" x="298.5" y="24" width="53" height="38"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="22"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
@@ -128,39 +128,34 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGX-PE-aWp">
-                                <rect key="frame" x="207" y="847" width="0.0" height="0.0"/>
+                                <rect key="frame" x="187.5" y="652" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUP-O5-FlK">
-                                <rect key="frame" x="23.666666666666671" y="146.66666666666666" width="188" height="43"/>
+                                <rect key="frame" x="23.5" y="102.5" width="188" height="43"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="26"/>
                                 <state key="normal" title="Display Date">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygB-nv-jBH">
-                                <rect key="frame" x="23.666666666666671" y="224.66666666666666" width="173" height="42.999999999999972"/>
+                                <rect key="frame" x="23.5" y="180.5" width="173" height="43"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="26"/>
                                 <state key="normal" title="Time Format">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDt-80-mL9">
-                                <rect key="frame" x="52" y="275" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJx-vQ-ypq">
-                                <rect key="frame" x="23.666666666666671" y="302.66666666666669" width="79" height="43"/>
+                                <rect key="frame" x="23.5" y="258.5" width="79" height="43"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="26"/>
                                 <state key="normal" title="Color">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIO-jL-eDK">
-                                <rect key="frame" x="23.666666666666657" y="380.66666666666669" width="250.99999999999997" height="43"/>
+                                <rect key="frame" x="23.5" y="336.5" width="251" height="43"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="26"/>
                                 <state key="normal" title="Display Tutorial">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -187,6 +182,10 @@
                         <viewLayoutGuide key="safeArea" id="Cxr-bP-BKc"/>
                     </view>
                     <connections>
+                        <outlet property="colorButton" destination="eJx-vQ-ypq" id="Yhf-za-pVk"/>
+                        <outlet property="displayDateButton" destination="QUP-O5-FlK" id="3Nb-dW-bcE"/>
+                        <outlet property="displayTutorialButton" destination="XIO-jL-eDK" id="Df6-V7-aCB"/>
+                        <outlet property="timeFormatButton" destination="ygB-nv-jBH" id="Ghi-Dj-D72"/>
                         <outlet property="versionLabel" destination="wGX-PE-aWp" id="Log-L1-7ts"/>
                     </connections>
                 </viewController>
@@ -199,17 +198,17 @@
             <objects>
                 <viewController storyboardIdentifier="SetupViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I9k-vd-SZO" customClass="SetupViewController" customModule="Focus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ikZ-TX-kmU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Your Preferred Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vd4-VE-Da2">
-                                <rect key="frame" x="33.666666666666657" y="379" width="347" height="28"/>
+                                <rect key="frame" x="14" y="259.5" width="347" height="28"/>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wiz-Za-fUD">
-                                <rect key="frame" x="70.666666666666671" y="453" width="73.000000000000014" height="40"/>
+                                <rect key="frame" x="51" y="338.5" width="73" height="40"/>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="24"/>
                                 <state key="normal" title="Black">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -219,7 +218,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iM-q8-VwN">
-                                <rect key="frame" x="278" y="453" width="58" height="40"/>
+                                <rect key="frame" x="258.5" y="338.5" width="58" height="40"/>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="24"/>
                                 <state key="normal" title="Grey">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

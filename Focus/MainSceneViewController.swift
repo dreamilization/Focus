@@ -26,10 +26,12 @@ class MainSceneViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(UserDefaults.standard.bool(forKey: "isBlackBg"))
+        let defaults = UserDefaults.standard;
+        if(defaults.bool(forKey: "isBlackBg"))
         {
             self.view.backgroundColor = UIColor.black;
         }
+        isTWH = defaults.bool(forKey: "isTWH");
         updateLabel();
         startTimer();
     }
@@ -46,8 +48,9 @@ class MainSceneViewController: UIViewController {
         let minutes = calendar.component(.minute, from: date);
         let hourString = String(isTWH && hour > 12 ? hour - 12 : hour);
         let minutesString = String(minutes);
+        let processedMin = minutesString.count == 1 ? "0" + minutesString : minutesString;
         isOdd = !isOdd;
-        timeLabel.text = hourString + ( !flashColumn || isOdd ? ":" : " " ) + minutesString;
+        timeLabel.text = hourString + ( !flashColumn || isOdd ? ":" : " " ) + processedMin;
     }
     
     

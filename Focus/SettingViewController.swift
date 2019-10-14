@@ -11,6 +11,10 @@ import UIKit
 class SettingViewController: UIViewController {
     
     @IBOutlet weak var versionLabel: UILabel!
+    @IBOutlet weak var displayDateButton: UIButton!
+    @IBOutlet weak var timeFormatButton: UIButton!
+    @IBOutlet weak var colorButton: UIButton!
+    @IBOutlet weak var displayTutorialButton: UIButton!
     
     override var prefersStatusBarHidden: Bool {
         return true;
@@ -22,10 +26,16 @@ class SettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(UserDefaults.standard.bool(forKey: "isBlackBg"))
+        let defaults = UserDefaults.standard;
+        if(defaults.bool(forKey: "isBlackBg"))
         {
             self.view.backgroundColor = UIColor.black;
+            colorButton.setTitle(defaults.bool(forKey: "isBlackBg") ? "Dark" : "Grey", for: .normal);
         }
+        let isTWH = defaults.bool(forKey: "isTWH");
+        timeFormatButton.setTitle(isTWH ? "12-Hour" : "24-Hour", for: .normal);
+        let isShowDate = defaults.bool(forKey: "isShowDate");
+        displayDateButton.setTitle(isShowDate ? "Displaying Date" : "Not Displaying Date", for: .normal);
         let verNum = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String;
         versionLabel.text = "Ver: " + (verNum ?? "N/A");
     }
