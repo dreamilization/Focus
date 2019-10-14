@@ -73,8 +73,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:41" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lI-Uz-ntS">
-                                <rect key="frame" x="152.66666666666666" y="386.66666666666669" width="108.66666666666666" height="52.666666666666686"/>
-                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="45"/>
+                                <rect key="frame" x="128.66666666666669" y="375.33333333333331" width="156.66666666666669" height="75.666666666666686"/>
+                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="65"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -121,7 +121,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wiz-Za-fUD">
-                                <rect key="frame" x="63.666666666666657" y="453" width="73" height="40"/>
+                                <rect key="frame" x="70.666666666666671" y="453" width="73.000000000000014" height="40"/>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="24"/>
                                 <state key="normal" title="Black">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -131,7 +131,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iM-q8-VwN">
-                                <rect key="frame" x="285" y="453" width="58" height="40"/>
+                                <rect key="frame" x="278" y="453" width="58" height="40"/>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="24"/>
                                 <state key="normal" title="Grey">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -143,11 +143,11 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="8iM-q8-VwN" firstAttribute="centerX" secondItem="F6a-lZ-VMh" secondAttribute="trailing" constant="-100" id="EAH-3x-3w8"/>
+                            <constraint firstItem="8iM-q8-VwN" firstAttribute="centerX" secondItem="F6a-lZ-VMh" secondAttribute="centerX" constant="100" id="EAH-3x-3w8"/>
                             <constraint firstItem="vd4-VE-Da2" firstAttribute="centerY" secondItem="F6a-lZ-VMh" secondAttribute="centerY" constant="-60" id="e3Z-li-iDX"/>
                             <constraint firstItem="8iM-q8-VwN" firstAttribute="centerY" secondItem="ikZ-TX-kmU" secondAttribute="centerY" constant="25" id="gCa-6G-b4H"/>
                             <constraint firstItem="Wiz-Za-fUD" firstAttribute="centerY" secondItem="ikZ-TX-kmU" secondAttribute="centerY" constant="25" id="kMA-5I-RgO"/>
-                            <constraint firstItem="Wiz-Za-fUD" firstAttribute="centerX" secondItem="F6a-lZ-VMh" secondAttribute="leading" constant="100" id="ll3-xw-jpP"/>
+                            <constraint firstItem="Wiz-Za-fUD" firstAttribute="centerX" secondItem="F6a-lZ-VMh" secondAttribute="centerX" constant="-100" id="ll3-xw-jpP"/>
                             <constraint firstItem="vd4-VE-Da2" firstAttribute="centerX" secondItem="ikZ-TX-kmU" secondAttribute="centerX" id="tIk-vy-dmL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="F6a-lZ-VMh"/>
