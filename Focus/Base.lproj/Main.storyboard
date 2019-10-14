@@ -16,15 +16,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXK-PP-s47">
-                                <rect key="frame" x="151.66666666666666" y="421.66666666666669" width="110.66666666666666" height="43"/>
+                                <rect key="frame" x="151.66666666666666" y="411.66666666666669" width="110.66666666666666" height="43"/>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypj-EU-XQW">
-                                <rect key="frame" x="169" y="427" width="76" height="42"/>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypj-EU-XQW">
+                                <rect key="frame" x="161" y="419" width="93" height="58"/>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="25"/>
                                 <state key="normal" title="Setup">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -34,7 +34,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ypj-EU-XQW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EHP-nb-E9b"/>
-                            <constraint firstItem="eXK-PP-s47" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-5" id="XAE-H0-kuj"/>
+                            <constraint firstItem="eXK-PP-s47" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-15" id="XAE-H0-kuj"/>
                             <constraint firstItem="ypj-EU-XQW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dkq-Po-FdC"/>
                             <constraint firstItem="eXK-PP-s47" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lVf-OZ-bGQ"/>
                         </constraints>
@@ -49,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="139"/>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>

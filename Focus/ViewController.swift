@@ -24,24 +24,23 @@ class ViewController: UIViewController {
         }
         else
         {
-            UIView.animate(withDuration: 1, animations: {
+            UIView.animate(withDuration: 1, delay: 0.5, animations: {
                 self.splashTitle.font = self.splashTitle.font.withSize(30);
                 self.splashTitle.text = "Welcome to Focus";
                 self.splashTitleConstraintY.constant -= 50;
                 self.splashTitle.center.y -= 50;
-                self.splashFirstTimeButtonConstraintY.constant += 25;
-                self.splashFirstTimeButton.center.y += 25;
+            })
+            UIView.animate(withDuration: 0.75, delay: 0.75, animations: {
+                self.splashFirstTimeButtonConstraintY.constant += 50;
+                self.splashFirstTimeButton.center.y += 50;
+                self.splashFirstTimeButton.alpha = 1;
             }, completion: { (finished: Bool) in
-                UIView.animate(withDuration: 0.5, animations: {
-                    self.splashFirstTimeButtonConstraintY.constant += 25;
-                    self.splashFirstTimeButton.center.y += 25;
-                    self.splashFirstTimeButton.alpha = 1;
-                }, completion: { (finished: Bool) in
-                    self.splashFirstTimeButton.isEnabled = true;
-                })
+                self.splashFirstTimeButton.isEnabled = true;
             })
         }
     }
+    
+    
 
 
 }
