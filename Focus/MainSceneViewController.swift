@@ -11,6 +11,9 @@ import UIKit
 class MainSceneViewController: UIViewController {
     @IBOutlet var lpgRecognizor: UILongPressGestureRecognizer!
     @IBOutlet weak var timeLabel: UILabel!
+    var timer : Timer?;
+    var flashColumn = false;
+    var isOdd = false;
     
     override var prefersStatusBarHidden: Bool {
         return true;
@@ -22,10 +25,28 @@ class MainSceneViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateLabel();
         if(UserDefaults.standard.bool(forKey: "isBlackBg"))
         {
             self.view.backgroundColor = UIColor.black;
         }
+        startTimer();
+    }
+    
+    func startTimer()
+    {
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateLabel), userInfo: nil, repeats: true);
+    }
+    
+    @objc func updateLabel() {
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let minutes = calendar.component(.minute, from: date)
+        let hourString = String(hour)
+        let minutesString = String(minutes)
+        isOdd = !isOdd;
+        timeLabel.text = hourString + ( isOdd || !flashColumn ? ":" : " " ) + minutesString
     }
     
     
