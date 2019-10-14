@@ -17,10 +17,10 @@ class SetupViewController: UIViewController {
     @IBOutlet weak var titleDisplayConstraintY: NSLayoutConstraint!
     let defaults = UserDefaults.standard;
     var count = 0;
-    let titleList = ["Set Your Preferred Color"];
-    let lftBList = ["Black"];
-    let rigBList = ["Grey"];
-    let argDef = ["isBlackBg"];
+    let titleList = ["Set Your Preferred Color", "Set Preferred Time Format", "Display Date?"];
+    let lftBList = ["Black", "12-Hr", "Yes"];
+    let rigBList = ["Grey", "24-Hr", "No"];
+    let argDef = ["isBlackBg", "isTWH", "isShowDate"];
     
     override var prefersStatusBarHidden: Bool {
         return true;
@@ -42,6 +42,11 @@ class SetupViewController: UIViewController {
         {
             nextScreen();
         }
+        else
+        {
+            swapScreen(title: titleDisplay, newTitle: titleList[count], leftButton: leftButton, lftBConent: lftBList[count], rightButton: rightButton, ritBContent: rigBList[count], timeDelta: 1);
+            resumeButton();
+        }
     }
     
     @IBAction func rightButtonOnClick(_ sender: Any) {
@@ -51,6 +56,11 @@ class SetupViewController: UIViewController {
         if(count >= titleList.count)
         {
             nextScreen();
+        }
+        else
+        {
+            swapScreen(title: titleDisplay, newTitle: titleList[count], leftButton: leftButton, lftBConent: lftBList[count], rightButton: rightButton, ritBContent: rigBList[count], timeDelta: 1);
+            resumeButton();
         }
     }
     
@@ -103,8 +113,8 @@ class SetupViewController: UIViewController {
                     title.center.y += f;
                 }
                 title.text = newTitle;
-                leftButton.titleLabel?.text = lftBConent;
-                rightButton.titleLabel?.text = ritBContent;
+                leftButton.setTitle(lftBConent, for: .normal);
+                rightButton.setTitle(ritBContent, for: .normal);
                 title.alpha = newTitle == "" ? 0 : 1;
                 leftButton.alpha = lftBConent == "" ? 0 : 1;
                 rightButton.alpha = ritBContent == "" ? 0 : 1;

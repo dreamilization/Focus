@@ -14,6 +14,7 @@ class MainSceneViewController: UIViewController {
     var timer : Timer?;
     var flashColumn = false;
     var isOdd = false;
+    var isTWH = false;
     
     override var prefersStatusBarHidden: Bool {
         return true;
@@ -25,11 +26,11 @@ class MainSceneViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateLabel();
         if(UserDefaults.standard.bool(forKey: "isBlackBg"))
         {
             self.view.backgroundColor = UIColor.black;
         }
+        updateLabel();
         startTimer();
     }
     
@@ -39,14 +40,14 @@ class MainSceneViewController: UIViewController {
     }
     
     @objc func updateLabel() {
-        let date = Date()
-        let calendar = Calendar.current
-        let hour = calendar.component(.hour, from: date)
-        let minutes = calendar.component(.minute, from: date)
-        let hourString = String(hour)
-        let minutesString = String(minutes)
+        let date = Date();
+        let calendar = Calendar.current;
+        let hour = calendar.component(.hour, from: date);
+        let minutes = calendar.component(.minute, from: date);
+        let hourString = String(isTWH && hour > 12 ? hour - 12 : hour);
+        let minutesString = String(minutes);
         isOdd = !isOdd;
-        timeLabel.text = hourString + ( isOdd || !flashColumn ? ":" : " " ) + minutesString
+        timeLabel.text = hourString + ( !flashColumn || isOdd ? ":" : " " ) + minutesString;
     }
     
     
