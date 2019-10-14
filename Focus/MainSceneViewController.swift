@@ -9,6 +9,14 @@
 import UIKit
 
 class MainSceneViewController: UIViewController {
+    
+    override var prefersStatusBarHidden: Bool {
+        return true;
+    }
+    
+    override var prefersHomeIndicatorAutoHidden: Bool {
+        return true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

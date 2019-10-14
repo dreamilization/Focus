@@ -21,6 +21,10 @@ class ViewController: UIViewController {
         return true;
     }
     
+    override var prefersHomeIndicatorAutoHidden: Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if(UserDefaults.standard.bool(forKey: "isBlackBg"))
@@ -33,7 +37,12 @@ class ViewController: UIViewController {
             UIView.animate(withDuration: 0.75, animations: {
                 self.splashWelcome.alpha = 1;
             }, completion: { (finished : Bool) in
-                self.present(main, animated: false, completion: nil);
+                UIView.animate(withDuration: 0.75, delay: 0.25, animations: {
+                    self.splashWelcome.alpha = 0;
+                    self.splashTitle.alpha = 0;
+                }, completion : { (finish : Bool) in
+                    self.present(main, animated: false, completion: nil);
+                })
             })
         }
         else
