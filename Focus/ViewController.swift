@@ -46,7 +46,8 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 0.75, delay: 0.25, animations: {
             self.splashScreen.alpha = 0;
         }, completion: { (finished: Bool) in
-            //TODO: Switch to the setup scene.
+            let setupView = self.storyboard?.instantiateViewController(withIdentifier: "SetupViewController") as! SetupViewController;
+            self.present(setupView, animated: true, completion: nil);
         })
     }
     
