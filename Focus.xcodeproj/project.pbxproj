@@ -40,9 +40,9 @@
 
 /* Begin PBXFileReference section */
 		99CF98C32354165C00183FF6 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
-		99E7FD3423542E0F00A6016E /* Focus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Focus.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		99E7FD3523542E0F00A6016E /* FocusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		99E7FD3623542E0F00A6016E /* FocusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99E7FD3423542E0F00A6016E /* Focus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Focus.app; path = "/Users/williamwu/Development/Focus/build/Debug-iphoneos/Focus.app"; sourceTree = "<absolute>"; };
+		99E7FD3523542E0F00A6016E /* FocusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FocusTests.xctest; path = "/Users/williamwu/Development/Focus/build/Debug-iphoneos/FocusTests.xctest"; sourceTree = "<absolute>"; };
+		99E7FD3623542E0F00A6016E /* FocusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FocusUITests.xctest; path = "/Users/williamwu/Development/Focus/build/Debug-iphoneos/FocusUITests.xctest"; sourceTree = "<absolute>"; };
 		99E7FD372354F55C00A6016E /* MainSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneViewController.swift; sourceTree = "<group>"; };
 		99E7FD392354F57200A6016E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		99F87B8E2353DA2200AF3B9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,9 +90,6 @@
 				99F87B8D2353DA2200AF3B9C /* Focus */,
 				99F87BA72353DA2300AF3B9C /* FocusTests */,
 				99F87BB22353DA2300AF3B9C /* FocusUITests */,
-				99E7FD3423542E0F00A6016E /* Focus.app */,
-				99E7FD3523542E0F00A6016E /* FocusTests.xctest */,
-				99E7FD3623542E0F00A6016E /* FocusUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};

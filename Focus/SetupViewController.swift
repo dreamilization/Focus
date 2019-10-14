@@ -77,7 +77,7 @@ class SetupViewController: UIViewController {
     rightButton : UIButton,
     ritBContent : String,
     timeDelta : Double) {
-        swapScreen(title: title, newTitle: newTitle, leftButton: leftButton, lftBConent: lftBConent, rightButton: rightButton, ritBContent: ritBContent, timeDelta: timeDelta, titleShiftY: 0, titleConstaint: NSLayoutConstraint.init());
+        swapScreen(title: title, newTitle: newTitle, leftButton: leftButton, lftBConent: lftBConent, rightButton: rightButton, ritBContent: ritBContent, timeDelta: timeDelta, titleShiftY: 0, titleConstaint: NSLayoutConstraint.init(), isSwitchScreen: false);
     }
     
     func swapScreen(title : UILabel,
@@ -88,7 +88,8 @@ class SetupViewController: UIViewController {
                    ritBContent : String,
                    timeDelta : Double,
                    titleShiftY : Int,
-                   titleConstaint : NSLayoutConstraint) {
+                   titleConstaint : NSLayoutConstraint,
+                   isSwitchScreen : Bool) {
         UIView.animate(withDuration: timeDelta / 2, animations: {
             title.alpha = 0;
             leftButton.alpha = 0;
@@ -107,6 +108,20 @@ class SetupViewController: UIViewController {
                 title.alpha = newTitle == "" ? 0 : 1;
                 leftButton.alpha = lftBConent == "" ? 0 : 1;
                 rightButton.alpha = ritBContent == "" ? 0 : 1;
+            }, completion: { (finished : Bool) in
+                if(isSwitchScreen)
+                {
+                    UIView.animate(withDuration: 0.75, delay: 0.5, animations: {
+                        if(UserDefaults.standard.bool(forKey: "isBlackBg"))
+                        {
+                            self.view.backgroundColor = UIColor.black;
+                        }
+                        title.alpha = 0;
+                    }, completion: {(finished : Bool) in
+                        let main = self.storyboard?.instantiateViewController(withIdentifier: "MainSceneViewController") as! MainSceneViewController;
+                        self.present(main, animated: false, completion: nil);
+                    })
+                }
             })
         })
     }
@@ -114,9 +129,7 @@ class SetupViewController: UIViewController {
     func nextScreen()
     {
         completeSetup();
-        let main = self.storyboard?.instantiateViewController(withIdentifier: "MainSceneViewController") as! MainSceneViewController;
-        swapScreen(title: titleDisplay, newTitle: "All Set!", leftButton: leftButton, lftBConent: "", rightButton: rightButton, ritBContent: "", timeDelta: 1.5, titleShiftY: 60, titleConstaint: titleDisplayConstraintY);
-        self.present(main, animated: false, completion: nil);
+        swapScreen(title: titleDisplay, newTitle: "All Set!", leftButton: leftButton, lftBConent: "", rightButton: rightButton, ritBContent: "", timeDelta: 1.5, titleShiftY: 60, titleConstaint: titleDisplayConstraintY, isSwitchScreen: true);
     }
     
     /*
