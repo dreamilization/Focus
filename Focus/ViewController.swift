@@ -17,13 +17,23 @@ class ViewController: UIViewController {
     @IBOutlet var splashScreen: UIView!
     @IBOutlet weak var splashWelcome: UILabel!
     
+    override var prefersStatusBarHidden: Bool {
+        return true;
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        if(UserDefaults.standard.bool(forKey: "isBlackBg"))
+        {
+            self.view.backgroundColor = UIColor.black;
+        }
         if(UserDefaults.standard.bool(forKey: "launchedBefore"))
         {
+            let main = self.storyboard?.instantiateViewController(withIdentifier: "MainSceneViewController") as! MainSceneViewController;
             UIView.animate(withDuration: 0.75, animations: {
                 self.splashWelcome.alpha = 1;
+            }, completion: { (finished : Bool) in
+                self.present(main, animated: false, completion: nil);
             })
         }
         else
