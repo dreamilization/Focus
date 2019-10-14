@@ -12,8 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var splashTitle: UILabel!
     @IBOutlet weak var splashTitleConstraintY: NSLayoutConstraint!
-    @IBOutlet weak var splashFirstTimeButton: UIButton!
-    @IBOutlet weak var splashFirstTimeButtonConstraintY: NSLayoutConstraint!
+    @IBOutlet weak var setupButton: UIButton!
+    @IBOutlet weak var setupButtonConstraintY: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,17 +31,21 @@ class ViewController: UIViewController {
                 self.splashTitle.center.y -= 50;
             })
             UIView.animate(withDuration: 0.75, delay: 0.75, animations: {
-                self.splashFirstTimeButtonConstraintY.constant += 50;
-                self.splashFirstTimeButton.center.y += 50;
-                self.splashFirstTimeButton.alpha = 1;
+                self.setupButtonConstraintY.constant += 50;
+                self.setupButton.center.y += 50;
+                self.setupButton.alpha = 1;
             }, completion: { (finished: Bool) in
-                self.splashFirstTimeButton.isEnabled = true;
+                self.setupButton.isEnabled = true;
             })
         }
     }
     
     
 
-
+    @IBAction func onClick(_ sender: UIButton) {
+        setupButton.isEnabled = false;
+        //TODO: Switch to the setup scene.
+    }
+    
 }
 
