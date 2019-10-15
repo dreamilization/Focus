@@ -17,6 +17,7 @@ class MainSceneViewController: UIViewController {
     var isTWH = false;
     var isShowingPassword = false;
     var isFocus = false;
+    var isTimer = false;
     var totalSec = 0;
     let defaults = UserDefaults.standard;
     @IBOutlet weak var dateLabel: UILabel!
@@ -41,6 +42,8 @@ class MainSceneViewController: UIViewController {
         isTWH = defaults.bool(forKey: "isTWH");
         mainLogic();
         startTimer();
+        timeLabel.isUserInteractionEnabled = true;
+        isFocus = UIAccessibility.isGuidedAccessEnabled;
         NotificationCenter.default.addObserver(self, selector: #selector(guidedAccessChanged), name: UIAccessibility.guidedAccessStatusDidChangeNotification, object: nil);
     }
     
@@ -51,11 +54,14 @@ class MainSceneViewController: UIViewController {
     
     @objc func guidedAccessChanged()
     {
-        if(UIAccessibility.isGuidedAccessEnabled && isShowingPassword)
+        if(UIAccessibility.isGuidedAccessEnabled)
         {
             isFocus = true;
             hideInfo();
-            isShowingPassword = false;
+            if(isShowingPassword)
+            {
+                isShowingPassword = false;
+            }
         }
         else
         {
@@ -96,15 +102,27 @@ class MainSceneViewController: UIViewController {
         }
         
         
-        
-        let hour = calendar.component(.hour, from: date);
-        let minutes = calendar.component(.minute, from: date);
-        let hourString = String(isTWH && hour > 12 ? hour - 12 : isTWH && hour == 0 ? 12 : hour);
-        let minutesString = String(minutes);
-        let processedMin = minutesString.count == 1 ? "0" + minutesString : minutesString;
-        let processedHr = hourString.count == 1 ? "0" + hourString : hourString;
-        isOdd = !isOdd;
-        timeLabel.text = processedHr + ( !flashColumn || isOdd ? ":" : " " ) + processedMin;
+        if(isTimer)
+        {
+            let hour = totalSec / 60 / 60;
+            let min = (totalSec - hour * 60) / 60
+            let sec = totalSec % 60;
+            let hourString = hour == 0 ? "" : String(hour);
+            let minString = min < 10 ? "0" + String(min) : String(min);
+            let secString = sec < 10 ? "0" + String(sec) : String(sec);
+            timeLabel.text = hourString + (hour == 0 ? "" : ":") + minString + ":" + secString;
+        }
+        else
+        {
+            let hour = calendar.component(.hour, from: date);
+            let minutes = calendar.component(.minute, from: date);
+            let hourString = String(isTWH && hour > 12 ? hour - 12 : isTWH && hour == 0 ? 12 : hour);
+            let minutesString = String(minutes);
+            let processedMin = minutesString.count == 1 ? "0" + minutesString : minutesString;
+            let processedHr = hourString.count == 1 ? "0" + hourString : hourString;
+            isOdd = !isOdd;
+            timeLabel.text = processedHr + ( !flashColumn || isOdd ? ":" : " " ) + processedMin;
+        }
     }
     
     func intToMonth(month : Int) -> String
@@ -176,7 +194,7 @@ class MainSceneViewController: UIViewController {
                 isShowingPassword = true;
                 if(UIAccessibility.isGuidedAccessEnabled)
                 {
-                    displayInfo(title: "Unable to Display", detail: "Focus Sesstion in Progress.");
+                    displayInfo(title: "Unable to Display", detail: "In order to end this session\ngo to Preference and click\n\"Reveal Password\" to quit.");
                 }
                 else
                 {
@@ -186,8 +204,20 @@ class MainSceneViewController: UIViewController {
         }
     }
     
-    @IBAction func revealTimer(_ sender: Any) {
+    @IBAction func revealTimer(_ sender: UITapGestureRecognizer) {
         
+        if(sender.state == .ended)
+        {
+            isTimer = !isTimer;
+            if(totalSec == 0 && !isFocus && isTimer)
+            {
+                displayInfo(title: "You Haven't Started Yet", detail: "Enter Guided Assess to Begin.")
+            }
+            if(!isTimer)
+            {
+                hideInfo();
+            }
+        }
     }
     
     @IBAction func enterSetting(_ sender: UILongPressGestureRecognizer) {

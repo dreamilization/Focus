@@ -77,6 +77,9 @@
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="65"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="OVW-YX-Yhr" appends="YES" id="ff4-7D-Fv6"/>
+                                </connections>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kff-sz-m1a">
                                 <rect key="frame" x="207" y="471" width="0.0" height="0.0"/>
@@ -96,7 +99,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itT-KG-Eqi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itT-KG-Eqi">
                                 <rect key="frame" x="207" y="501" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -121,7 +124,6 @@
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="pk7-Tp-7xW" appends="YES" id="nlc-C2-4AS"/>
                             <outletCollection property="gestureRecognizers" destination="3K6-fW-nye" appends="YES" id="lpC-bg-nat"/>
-                            <outletCollection property="gestureRecognizers" destination="OVW-YX-Yhr" appends="YES" id="Jfl-iX-FaT"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="c1t-mj-LBv"/>
