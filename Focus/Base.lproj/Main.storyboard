@@ -84,14 +84,22 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press to View Tips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBf-XI-aZu">
+                                <rect key="frame" x="125.66666666666669" y="839" width="163" height="18"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Kff-sz-m1a" firstAttribute="centerY" secondItem="6lI-Uz-ntS" secondAttribute="bottom" constant="20" id="Hmw-2u-kYg"/>
                             <constraint firstItem="6lI-Uz-ntS" firstAttribute="centerX" secondItem="EeD-re-Lty" secondAttribute="centerX" id="OeZ-6F-M6r"/>
+                            <constraint firstItem="UBf-XI-aZu" firstAttribute="bottom" secondItem="3gc-Hr-a6w" secondAttribute="bottom" constant="-5" id="QB3-0s-eTo"/>
                             <constraint firstItem="6lI-Uz-ntS" firstAttribute="centerY" secondItem="EeD-re-Lty" secondAttribute="centerY" constant="-35" id="QMF-k9-Bfi"/>
                             <constraint firstItem="Kff-sz-m1a" firstAttribute="centerX" secondItem="6lI-Uz-ntS" secondAttribute="centerX" id="b5L-r8-LmM"/>
+                            <constraint firstItem="UBf-XI-aZu" firstAttribute="centerX" secondItem="EeD-re-Lty" secondAttribute="centerX" id="vTw-o1-FsW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3gc-Hr-a6w"/>
                         <connections>
