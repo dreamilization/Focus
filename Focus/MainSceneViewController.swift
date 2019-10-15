@@ -17,6 +17,7 @@ class MainSceneViewController: UIViewController {
     var isTWH = false;
     let defaults = UserDefaults.standard;
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var firstHint: UILabel!
     
     override var prefersStatusBarHidden: Bool {
         return true;
@@ -62,6 +63,14 @@ class MainSceneViewController: UIViewController {
             let dayString = String(day);
             let yearString = String(year);
             dateLabel.text = monthString + " " + dayString + ", " + yearString;
+        }
+        if(defaults.bool(forKey: "firstTimeLaunch"))
+        {
+            firstHint.text = "Press to View Tips";
+        }
+        else
+        {
+            firstHint.text = "";
         }
     }
     
