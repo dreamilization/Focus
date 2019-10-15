@@ -41,8 +41,24 @@ class SettingViewController: UIViewController {
         displayDateButton.setTitle(isShowDate ? "Displaying Date" : "Not Displaying Date", for: .normal);
         let verNum = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String;
         versionLabel.text = "Ver: " + (verNum ?? "N/A");
+        if(UIAccessibility.isGuidedAccessEnabled)
+        {
+            newGuidedPwButton.setTitle("Reveal Password", for: .normal);
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(guidedAccessChanged), name: UIAccessibility.guidedAccessStatusDidChangeNotification, object: nil);
     }
     
+    @objc func guidedAccessChanged()
+    {
+        if(UIAccessibility.isGuidedAccessEnabled)
+        {
+            newGuidedPwButton.setTitle("Reveal Password", for: .normal);
+        }
+        else
+        {
+            newGuidedPwButton.setTitle("New Guided Password", for: .normal);
+        }
+    }
     
     @IBAction func showInternalScreen(_ sender: UILongPressGestureRecognizer) {
         if(sender.state == .began)
@@ -70,9 +86,15 @@ class SettingViewController: UIViewController {
         }
         else
         {
-            let alert = UIAlertController(title: "Unable to Generate", message: "Guided Access is currently being enabled. To generate a new password, disable Guided Access first.", preferredStyle: .alert);
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil));
-            self.present(alert, animated: true);
+            let isPassword = newGuidedPwButton.titleLabel?.text?.count == 6;
+            UIView.animate(withDuration: 0.5, animations: {
+                self.newGuidedPwButton.alpha = 0;
+            }, completion: { (finished : Bool) in
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.newGuidedPwButton.setTitle(isPassword ? "Reveal Password" : self.defaults.string(forKey: "guidedPasswd"), for: .normal);
+                    self.newGuidedPwButton.alpha = 1;
+                })
+            })
         }
     }
     

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Focus
+@testable import Forcus
 
 class FocusTests: XCTestCase {
 

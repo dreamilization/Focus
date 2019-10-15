@@ -90,36 +90,66 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S00-M1-fMD">
+                                <rect key="frame" x="207" y="491" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itT-KG-Eqi">
+                                <rect key="frame" x="207" y="501" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="itT-KG-Eqi" firstAttribute="centerX" secondItem="EeD-re-Lty" secondAttribute="centerX" id="B4n-PM-68x"/>
                             <constraint firstItem="Kff-sz-m1a" firstAttribute="centerY" secondItem="6lI-Uz-ntS" secondAttribute="bottom" constant="20" id="Hmw-2u-kYg"/>
                             <constraint firstItem="6lI-Uz-ntS" firstAttribute="centerX" secondItem="EeD-re-Lty" secondAttribute="centerX" id="OeZ-6F-M6r"/>
                             <constraint firstItem="UBf-XI-aZu" firstAttribute="bottom" secondItem="3gc-Hr-a6w" secondAttribute="bottom" constant="-5" id="QB3-0s-eTo"/>
                             <constraint firstItem="6lI-Uz-ntS" firstAttribute="centerY" secondItem="EeD-re-Lty" secondAttribute="centerY" constant="-35" id="QMF-k9-Bfi"/>
+                            <constraint firstItem="S00-M1-fMD" firstAttribute="top" secondItem="Kff-sz-m1a" secondAttribute="bottom" constant="20" id="Qmm-c2-cNt"/>
                             <constraint firstItem="Kff-sz-m1a" firstAttribute="centerX" secondItem="6lI-Uz-ntS" secondAttribute="centerX" id="b5L-r8-LmM"/>
+                            <constraint firstItem="S00-M1-fMD" firstAttribute="centerX" secondItem="EeD-re-Lty" secondAttribute="centerX" id="gHf-7M-cm9"/>
+                            <constraint firstItem="itT-KG-Eqi" firstAttribute="top" secondItem="S00-M1-fMD" secondAttribute="bottom" constant="10" id="rQe-8C-GnR"/>
                             <constraint firstItem="UBf-XI-aZu" firstAttribute="centerX" secondItem="EeD-re-Lty" secondAttribute="centerX" id="vTw-o1-FsW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3gc-Hr-a6w"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="pk7-Tp-7xW" appends="YES" id="nlc-C2-4AS"/>
+                            <outletCollection property="gestureRecognizers" destination="3K6-fW-nye" appends="YES" id="lpC-bg-nat"/>
+                            <outletCollection property="gestureRecognizers" destination="OVW-YX-Yhr" appends="YES" id="Jfl-iX-FaT"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="c1t-mj-LBv"/>
                     <connections>
                         <outlet property="dateLabel" destination="Kff-sz-m1a" id="nSq-Wx-543"/>
                         <outlet property="firstHint" destination="UBf-XI-aZu" id="C03-Pu-G1O"/>
+                        <outlet property="infoDisplay" destination="S00-M1-fMD" id="HIA-T5-B0E"/>
+                        <outlet property="infoDisplayDetail" destination="itT-KG-Eqi" id="lZJ-WW-HqY"/>
                         <outlet property="lpgRecognizor" destination="pk7-Tp-7xW" id="4j4-x5-RA6"/>
                         <outlet property="timeLabel" destination="6lI-Uz-ntS" id="mG9-PA-kom"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Otr-Sm-00B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="3K6-fW-nye" userLabel="Double Tap Recognizer">
+                    <connections>
+                        <action selector="showPassword:" destination="GQF-Rd-biO" id="A8o-IM-Nzf"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.40000000000000002" id="pk7-Tp-7xW">
                     <connections>
                         <action selector="enterSetting:" destination="GQF-Rd-biO" id="hf1-be-GQz"/>
                     </connections>
                 </pongPressGestureRecognizer>
+                <tapGestureRecognizer id="OVW-YX-Yhr" userLabel="Timer Reveal">
+                    <connections>
+                        <action selector="revealTimer:" destination="GQF-Rd-biO" id="UcT-7C-aYs"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="138" y="897"/>
         </scene>
@@ -147,7 +177,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGX-PE-aWp">
                                 <rect key="frame" x="207" y="847" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -374,8 +404,8 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofo-9K-oa7">
-                                                <rect key="frame" x="151.66666666666666" y="893.33333333333337" width="110.99999999999997" height="44"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forcus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofo-9K-oa7">
+                                                <rect key="frame" x="141" y="893.33333333333337" width="132.33333333333337" height="44"/>
                                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="36"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>

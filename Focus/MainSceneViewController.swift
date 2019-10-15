@@ -15,8 +15,13 @@ class MainSceneViewController: UIViewController {
     var flashColumn = false;
     var isOdd = false;
     var isTWH = false;
+    var isShowingPassword = false;
+    var isFocus = false;
+    var totalSec = 0;
     let defaults = UserDefaults.standard;
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var infoDisplay: UILabel!
+    @IBOutlet weak var infoDisplayDetail: UILabel!
     @IBOutlet weak var firstHint: UILabel!
     
     override var prefersStatusBarHidden: Bool {
@@ -34,26 +39,33 @@ class MainSceneViewController: UIViewController {
             self.view.backgroundColor = UIColor.black;
         }
         isTWH = defaults.bool(forKey: "isTWH");
-        updateLabel();
+        mainLogic();
         startTimer();
+        NotificationCenter.default.addObserver(self, selector: #selector(guidedAccessChanged), name: UIAccessibility.guidedAccessStatusDidChangeNotification, object: nil);
     }
     
     func startTimer()
     {
-        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateLabel), userInfo: nil, repeats: true);
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(mainLogic), userInfo: nil, repeats: true);
     }
     
-    @objc func updateLabel() {
+    @objc func guidedAccessChanged()
+    {
+        if(UIAccessibility.isGuidedAccessEnabled && isShowingPassword)
+        {
+            isFocus = true;
+            hideInfo();
+            isShowingPassword = false;
+        }
+        else
+        {
+            isFocus = false;
+        }
+    }
+    
+    @objc func mainLogic() {
         let date = Date();
         let calendar = Calendar.current;
-        let hour = calendar.component(.hour, from: date);
-        let minutes = calendar.component(.minute, from: date);
-        let hourString = String(isTWH && hour > 12 ? hour - 12 : isTWH && hour == 0 ? 12 : hour);
-        let minutesString = String(minutes);
-        let processedMin = minutesString.count == 1 ? "0" + minutesString : minutesString;
-        let processedHr = hourString.count == 1 ? "0" + hourString : hourString;
-        isOdd = !isOdd;
-        timeLabel.text = processedHr + ( !flashColumn || isOdd ? ":" : " " ) + processedMin;
         if(defaults.bool(forKey: "isShowDate"))
         {
             let year = calendar.component(.year, from: date);
@@ -64,6 +76,11 @@ class MainSceneViewController: UIViewController {
             let yearString = String(year);
             dateLabel.text = monthString + " " + dayString + ", " + yearString;
         }
+        else
+        {
+            dateLabel.text = "";
+        }
+        
         if(defaults.bool(forKey: "firstTimeLaunch"))
         {
             firstHint.text = "Press to View Tips";
@@ -72,6 +89,22 @@ class MainSceneViewController: UIViewController {
         {
             firstHint.text = "";
         }
+        
+        if(isFocus)
+        {
+            totalSec += 1;
+        }
+        
+        
+        
+        let hour = calendar.component(.hour, from: date);
+        let minutes = calendar.component(.minute, from: date);
+        let hourString = String(isTWH && hour > 12 ? hour - 12 : isTWH && hour == 0 ? 12 : hour);
+        let minutesString = String(minutes);
+        let processedMin = minutesString.count == 1 ? "0" + minutesString : minutesString;
+        let processedHr = hourString.count == 1 ? "0" + hourString : hourString;
+        isOdd = !isOdd;
+        timeLabel.text = processedHr + ( !flashColumn || isOdd ? ":" : " " ) + processedMin;
     }
     
     func intToMonth(month : Int) -> String
@@ -106,6 +139,56 @@ class MainSceneViewController: UIViewController {
         }
     }
     
+    func displayInfo(title : String, detail : String)
+    {
+        UIView.animate(withDuration: 0.4, animations: {
+            self.infoDisplay.alpha = 0;
+            self.infoDisplayDetail.alpha = 0;
+        }, completion: { (finished : Bool) in
+            UIView.animate(withDuration: 0.6, animations: {
+                self.infoDisplay.text = title;
+                self.infoDisplayDetail.text = detail;
+                self.infoDisplay.alpha = 1;
+                self.infoDisplayDetail.alpha = 1;
+            })
+        });
+    }
+    
+    func hideInfo()
+    {
+        UIView.animate(withDuration: 0.6, animations: {
+            self.infoDisplay.alpha = 0;
+            self.infoDisplayDetail.alpha = 0;
+        });
+    }
+    
+    
+    @IBAction func showPassword(_ sender: UITapGestureRecognizer) {
+        if(sender.state == .ended)
+        {
+            if(isShowingPassword)
+            {
+                hideInfo();
+                isShowingPassword = false;
+            }
+            else
+            {
+                isShowingPassword = true;
+                if(UIAccessibility.isGuidedAccessEnabled)
+                {
+                    displayInfo(title: "Unable to Display", detail: "Focus Sesstion in Progress.");
+                }
+                else
+                {
+                    displayInfo(title: "Guided Access Password", detail: defaults.string(forKey: "guidedPasswd")!);
+                }
+            }
+        }
+    }
+    
+    @IBAction func revealTimer(_ sender: Any) {
+        
+    }
     
     @IBAction func enterSetting(_ sender: UILongPressGestureRecognizer) {
         if(sender.state == .began)

@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         {
             UIView.animate(withDuration: 1, delay: 0.5, animations: {
                 self.splashTitle.font = self.splashTitle.font.withSize(30);
-                self.splashTitle.text = "Welcome to Focus";
+                self.splashTitle.text = "Welcome to Forcus";
                 self.splashTitleConstraintY.constant -= 25;
                 self.splashTitle.center.y -= 25;
             })
