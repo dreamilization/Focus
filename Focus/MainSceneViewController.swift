@@ -47,7 +47,7 @@ class MainSceneViewController: UIViewController {
         let calendar = Calendar.current;
         let hour = calendar.component(.hour, from: date);
         let minutes = calendar.component(.minute, from: date);
-        let hourString = String(isTWH && hour > 12 ? hour - 12 : hour);
+        let hourString = String(isTWH && hour > 12 ? hour - 12 : hour == 0 ? 12 : hour);
         let minutesString = String(minutes);
         let processedMin = minutesString.count == 1 ? "0" + minutesString : minutesString;
         let processedHr = hourString.count == 1 ? "0" + hourString : hourString;
