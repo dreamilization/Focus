@@ -19,6 +19,7 @@
 		99F87B9E2353DA2300AF3B9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99F87B9C2353DA2300AF3B9C /* LaunchScreen.storyboard */; };
 		99F87BA92353DA2300AF3B9C /* FocusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F87BA82353DA2300AF3B9C /* FocusTests.swift */; };
 		99F87BB42353DA2300AF3B9C /* FocusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F87BB32353DA2300AF3B9C /* FocusUITests.swift */; };
+		99FC7A9223559B4100122F6E /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FC7A9123559B4100122F6E /* TipsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +43,6 @@
 		99CF98C32354165C00183FF6 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		99E7FD372354F55C00A6016E /* MainSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneViewController.swift; sourceTree = "<group>"; };
 		99E7FD392354F57200A6016E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		99E7FD3B2354FEDA00A6016E /* Focus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Focus.app; path = "/Users/williamwu/Development/Focus/build/Debug-iphoneos/Focus.app"; sourceTree = "<absolute>"; };
-		99E7FD3C2354FFFC00A6016E /* FocusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FocusTests.xctest; path = "/Users/williamwu/Development/Focus/build/Debug-iphoneos/FocusTests.xctest"; sourceTree = "<absolute>"; };
-		99E7FD3D2354FFFC00A6016E /* FocusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FocusUITests.xctest; path = "/Users/williamwu/Development/Focus/build/Debug-iphoneos/FocusUITests.xctest"; sourceTree = "<absolute>"; };
 		99F87B8E2353DA2200AF3B9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99F87B902353DA2200AF3B9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		99F87B922353DA2200AF3B9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +55,10 @@
 		99F87BAA2353DA2300AF3B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99F87BB32353DA2300AF3B9C /* FocusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusUITests.swift; sourceTree = "<group>"; };
 		99F87BB52353DA2300AF3B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99FC7A8E23559B0B00122F6E /* Focus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Focus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99FC7A8F23559B0B00122F6E /* FocusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99FC7A9023559B0B00122F6E /* FocusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99FC7A9123559B4100122F6E /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,9 +89,13 @@
 		99F87B822353DA2200AF3B9C = {
 			isa = PBXGroup;
 			children = (
+				99FC7A9123559B4100122F6E /* TipsViewController.swift */,
 				99F87B8D2353DA2200AF3B9C /* Focus */,
 				99F87BA72353DA2300AF3B9C /* FocusTests */,
 				99F87BB22353DA2300AF3B9C /* FocusUITests */,
+				99FC7A8E23559B0B00122F6E /* Focus.app */,
+				99FC7A8F23559B0B00122F6E /* FocusTests.xctest */,
+				99FC7A9023559B0B00122F6E /* FocusUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,7 +152,7 @@
 			);
 			name = Focus;
 			productName = Focus;
-			productReference = 99E7FD3B2354FEDA00A6016E /* Focus.app */;
+			productReference = 99FC7A8E23559B0B00122F6E /* Focus.app */;
 			productType = "com.apple.product-type.application";
 		};
 		99F87BA32353DA2300AF3B9C /* FocusTests */ = {
@@ -164,7 +170,7 @@
 			);
 			name = FocusTests;
 			productName = FocusTests;
-			productReference = 99E7FD3C2354FFFC00A6016E /* FocusTests.xctest */;
+			productReference = 99FC7A8F23559B0B00122F6E /* FocusTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		99F87BAE2353DA2300AF3B9C /* FocusUITests */ = {
@@ -182,7 +188,7 @@
 			);
 			name = FocusUITests;
 			productName = FocusUITests;
-			productReference = 99E7FD3D2354FFFC00A6016E /* FocusUITests.xctest */;
+			productReference = 99FC7A9023559B0B00122F6E /* FocusUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -262,6 +268,7 @@
 			files = (
 				99F87B932353DA2200AF3B9C /* ViewController.swift in Sources */,
 				99F87B8F2353DA2200AF3B9C /* AppDelegate.swift in Sources */,
+				99FC7A9223559B4100122F6E /* TipsViewController.swift in Sources */,
 				99E7FD382354F55C00A6016E /* MainSceneViewController.swift in Sources */,
 				99F87B992353DA2200AF3B9C /* Focus.xcdatamodeld in Sources */,
 				99F87B912353DA2200AF3B9C /* SceneDelegate.swift in Sources */,

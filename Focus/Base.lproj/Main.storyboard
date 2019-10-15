@@ -129,7 +129,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiV-XG-1Mn">
-                                <rect key="frame" x="337.66666666666669" y="76" width="53" height="38"/>
+                                <rect key="frame" x="331" y="76" width="53" height="38"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="22"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
@@ -186,7 +186,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wGX-PE-aWp" firstAttribute="centerX" secondItem="ey9-lt-zRf" secondAttribute="centerX" id="0Pq-gO-MfT"/>
-                            <constraint firstItem="fiV-XG-1Mn" firstAttribute="centerX" secondItem="Cxr-bP-BKc" secondAttribute="trailing" constant="-50" id="3J0-Au-b22"/>
+                            <constraint firstItem="fiV-XG-1Mn" firstAttribute="trailing" secondItem="Cxr-bP-BKc" secondAttribute="trailing" constant="-30" id="3J0-Au-b22"/>
                             <constraint firstItem="ygB-nv-jBH" firstAttribute="leading" secondItem="QUP-O5-FlK" secondAttribute="leading" id="7w6-4S-kvC"/>
                             <constraint firstItem="eJx-vQ-ypq" firstAttribute="top" secondItem="ygB-nv-jBH" secondAttribute="bottom" constant="35" id="88y-hJ-Ssx"/>
                             <constraint firstItem="ygB-nv-jBH" firstAttribute="leading" secondItem="Um4-L0-Cnd" secondAttribute="leading" id="AaG-G5-biX"/>
@@ -272,10 +272,10 @@
             </objects>
             <point key="canvasLocation" x="956.52173913043487" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Tips View Controller-->
         <scene sceneID="rIi-cc-Tll">
             <objects>
-                <viewController id="0hP-bp-tLH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TipsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0hP-bp-tLH" customClass="TipsViewController" customModule="Focus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jG0-wu-r19">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
