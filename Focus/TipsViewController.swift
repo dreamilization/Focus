@@ -12,7 +12,7 @@ class TipsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserDefaults.standard.set(false, forKey: "firstTimeLaunch");
+        UserDefaults.standard;
         // Do any additional setup after loading the view.
     }
     

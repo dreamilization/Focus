@@ -78,6 +78,7 @@ class SetupViewController: UIViewController {
     
     func completeSetup() {
         defaults.set(true, forKey: "launchedBefore");
+        defaults.set(true, forKey: "firstTimeLaunch");
     }
     
     func swapScreen(title : UILabel,

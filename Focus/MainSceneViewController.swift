@@ -101,8 +101,16 @@ class MainSceneViewController: UIViewController {
     @IBAction func enterSetting(_ sender: UILongPressGestureRecognizer) {
         if(sender.state == .began)
         {
-            let setting = self.storyboard?.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController;
-            self.present(setting, animated: true, completion: nil);
+            if(defaults.bool(forKey: "firstTimeLaunch"))
+            {
+                let tips = self.storyboard?.instantiateViewController(withIdentifier: "TipsViewController") as! TipsViewController;
+                self.present(tips, animated: true, completion: nil);
+            }
+            else
+            {
+                let setting = self.storyboard?.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController;
+                self.present(setting, animated: true, completion: nil);
+            }
         }
     }
     

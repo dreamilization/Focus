@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		997F3F4523559CE100D4B17A /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997F3F4423559CE100D4B17A /* TipsViewController.swift */; };
 		99CF98C42354165C00183FF6 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF98C32354165C00183FF6 /* SetupViewController.swift */; };
 		99E7FD382354F55C00A6016E /* MainSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E7FD372354F55C00A6016E /* MainSceneViewController.swift */; };
 		99E7FD3A2354F57200A6016E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E7FD392354F57200A6016E /* SettingViewController.swift */; };
@@ -19,7 +20,6 @@
 		99F87B9E2353DA2300AF3B9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99F87B9C2353DA2300AF3B9C /* LaunchScreen.storyboard */; };
 		99F87BA92353DA2300AF3B9C /* FocusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F87BA82353DA2300AF3B9C /* FocusTests.swift */; };
 		99F87BB42353DA2300AF3B9C /* FocusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F87BB32353DA2300AF3B9C /* FocusUITests.swift */; };
-		99FC7A9223559B4100122F6E /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FC7A9123559B4100122F6E /* TipsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		997F3F4423559CE100D4B17A /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TipsViewController.swift; path = ../TipsViewController.swift; sourceTree = "<group>"; };
 		99CF98C32354165C00183FF6 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		99E7FD372354F55C00A6016E /* MainSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneViewController.swift; sourceTree = "<group>"; };
 		99E7FD392354F57200A6016E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +59,6 @@
 		99FC7A8E23559B0B00122F6E /* Focus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Focus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FC7A8F23559B0B00122F6E /* FocusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FC7A9023559B0B00122F6E /* FocusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		99FC7A9123559B4100122F6E /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +89,6 @@
 		99F87B822353DA2200AF3B9C = {
 			isa = PBXGroup;
 			children = (
-				99FC7A9123559B4100122F6E /* TipsViewController.swift */,
 				99F87B8D2353DA2200AF3B9C /* Focus */,
 				99F87BA72353DA2300AF3B9C /* FocusTests */,
 				99F87BB22353DA2300AF3B9C /* FocusUITests */,
@@ -108,6 +107,7 @@
 				99E7FD372354F55C00A6016E /* MainSceneViewController.swift */,
 				99E7FD392354F57200A6016E /* SettingViewController.swift */,
 				99CF98C32354165C00183FF6 /* SetupViewController.swift */,
+				997F3F4423559CE100D4B17A /* TipsViewController.swift */,
 				99F87B942353DA2200AF3B9C /* Main.storyboard */,
 				99F87B9A2353DA2300AF3B9C /* Assets.xcassets */,
 				99F87B9C2353DA2300AF3B9C /* LaunchScreen.storyboard */,
@@ -268,7 +268,7 @@
 			files = (
 				99F87B932353DA2200AF3B9C /* ViewController.swift in Sources */,
 				99F87B8F2353DA2200AF3B9C /* AppDelegate.swift in Sources */,
-				99FC7A9223559B4100122F6E /* TipsViewController.swift in Sources */,
+				997F3F4523559CE100D4B17A /* TipsViewController.swift in Sources */,
 				99E7FD382354F55C00A6016E /* MainSceneViewController.swift in Sources */,
 				99F87B992353DA2200AF3B9C /* Focus.xcdatamodeld in Sources */,
 				99F87B912353DA2200AF3B9C /* SceneDelegate.swift in Sources */,
