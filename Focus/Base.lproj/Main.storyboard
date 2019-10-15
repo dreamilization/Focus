@@ -123,13 +123,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Um4-L0-Cnd">
-                                <rect key="frame" x="23.666666666666671" y="63.666666666666657" width="169" height="41"/>
-                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="35"/>
+                                <rect key="frame" x="30" y="74" width="192.66666666666666" height="46.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiV-XG-1Mn">
-                                <rect key="frame" x="337.66666666666669" y="68" width="53" height="38"/>
+                                <rect key="frame" x="337.66666666666669" y="76" width="53" height="38"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="22"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
@@ -143,7 +143,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUP-O5-FlK">
-                                <rect key="frame" x="23.666666666666671" y="146.66666666666666" width="188" height="43"/>
+                                <rect key="frame" x="30" y="167.66666666666666" width="188" height="43"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="26"/>
                                 <state key="normal" title="Display Date">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -153,7 +153,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygB-nv-jBH">
-                                <rect key="frame" x="23.666666666666671" y="224.66666666666666" width="173" height="42.999999999999972"/>
+                                <rect key="frame" x="30" y="245.66666666666663" width="173" height="43"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="26"/>
                                 <state key="normal" title="Time Format">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -163,7 +163,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJx-vQ-ypq">
-                                <rect key="frame" x="23.666666666666671" y="302.66666666666669" width="79" height="43"/>
+                                <rect key="frame" x="30" y="323.66666666666669" width="79" height="43"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="26"/>
                                 <state key="normal" title="Color">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -173,9 +173,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIO-jL-eDK">
-                                <rect key="frame" x="23.666666666666657" y="380.66666666666669" width="250.99999999999997" height="43"/>
+                                <rect key="frame" x="30" y="401.66666666666669" width="282" height="43"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="26"/>
-                                <state key="normal" title="Display Tutorial">
+                                <state key="normal" title="Display Quick TIps">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -193,12 +193,12 @@
                             <constraint firstItem="eJx-vQ-ypq" firstAttribute="leading" secondItem="QUP-O5-FlK" secondAttribute="leading" id="H9a-nl-Eno"/>
                             <constraint firstItem="XIO-jL-eDK" firstAttribute="leading" secondItem="ygB-nv-jBH" secondAttribute="leading" id="LmS-48-biX"/>
                             <constraint firstItem="wGX-PE-aWp" firstAttribute="centerY" secondItem="Cxr-bP-BKc" secondAttribute="bottom" constant="-15" id="MpB-c6-58R"/>
-                            <constraint firstItem="Um4-L0-Cnd" firstAttribute="centerY" secondItem="Cxr-bP-BKc" secondAttribute="top" constant="40" id="fWS-Pq-Qx3"/>
+                            <constraint firstItem="Um4-L0-Cnd" firstAttribute="top" secondItem="Cxr-bP-BKc" secondAttribute="top" constant="30" id="fWS-Pq-Qx3"/>
                             <constraint firstItem="XIO-jL-eDK" firstAttribute="top" secondItem="eJx-vQ-ypq" secondAttribute="bottom" constant="35" id="jQ2-Px-Z1P"/>
-                            <constraint firstItem="fiV-XG-1Mn" firstAttribute="centerY" secondItem="Cxr-bP-BKc" secondAttribute="top" constant="43" id="l5a-1g-SAP"/>
-                            <constraint firstItem="ygB-nv-jBH" firstAttribute="top" secondItem="Um4-L0-Cnd" secondAttribute="bottom" constant="120" id="lci-lK-cXm"/>
+                            <constraint firstItem="fiV-XG-1Mn" firstAttribute="top" secondItem="Cxr-bP-BKc" secondAttribute="top" constant="32" id="l5a-1g-SAP"/>
+                            <constraint firstItem="ygB-nv-jBH" firstAttribute="top" secondItem="Um4-L0-Cnd" secondAttribute="bottom" constant="125" id="lci-lK-cXm"/>
                             <constraint firstItem="ygB-nv-jBH" firstAttribute="top" secondItem="QUP-O5-FlK" secondAttribute="bottom" constant="35" id="lk9-GM-MoD"/>
-                            <constraint firstItem="Um4-L0-Cnd" firstAttribute="centerX" secondItem="Cxr-bP-BKc" secondAttribute="leading" constant="108" id="oaz-aN-Pu4"/>
+                            <constraint firstItem="Um4-L0-Cnd" firstAttribute="leading" secondItem="Cxr-bP-BKc" secondAttribute="leading" constant="30" id="oaz-aN-Pu4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cxr-bP-BKc"/>
                     </view>
@@ -304,8 +304,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tutorial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5GQ-gL-gbX">
-                                                <rect key="frame" x="25" y="75" width="169.33333333333334" height="41"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Tips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5GQ-gL-gbX">
+                                                <rect key="frame" x="25" y="75" width="211" height="41"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="35"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -317,7 +317,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="di6-dY-ONO">
-                                                <rect key="frame" x="25" y="212" width="314" height="42"/>
+                                                <rect key="frame" x="25" y="212" width="314.33333333333331" height="42"/>
                                                 <string key="text">2. Double Tap to Start a new 
    Focus Timer.</string>
                                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
@@ -325,7 +325,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. New Feature Pending" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iv5-Bd-aFG">
-                                                <rect key="frame" x="25" y="284" width="239" height="21"/>
+                                                <rect key="frame" x="24.999999999999986" y="284" width="238.66666666666663" height="21"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -339,7 +339,7 @@
                                                 <size key="shadowOffset" width="2" height="2"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 2019 William Wu." lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3m-mT-dgG">
-                                                <rect key="frame" x="126" y="952" width="162" height="18"/>
+                                                <rect key="frame" x="125.66666666666667" y="952.33333333333337" width="162.66666666666663" height="17.666666666666629"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
