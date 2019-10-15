@@ -81,6 +81,7 @@ class SetupViewController: UIViewController {
         defaults.set(true, forKey: "firstTimeLaunch");
         defaults.set(0, forKey: "focusedMin");
         defaults.set(1, forKey: "launchedTimes");
+        defaults.set(Utilities.generatePasswd(), forKey: "guidedPasswd");
     }
     
     func swapScreen(title : UILabel,

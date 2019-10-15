@@ -15,6 +15,7 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var displayDateButton: UIButton!
     @IBOutlet weak var timeFormatButton: UIButton!
     @IBOutlet weak var colorButton: UIButton!
+    @IBOutlet weak var newGuidedPwButton: UIButton!
     @IBOutlet weak var displayTutorialButton: UIButton!
     @IBOutlet weak var internalSettingsButton: UIButton!
     let defaults = UserDefaults.standard;
@@ -52,6 +53,28 @@ class SettingViewController: UIViewController {
         }
     }
     
+    @IBAction func generateNewPasswd(_ sender: Any) {
+//      NSLog("Accessabilitiy enabled: %@", UIAccessibility.isGuidedAccessEnabled ? "YES" : "NO");
+        if (!UIAccessibility.isGuidedAccessEnabled)
+        {
+            newGuidedPwButton.isEnabled = false;
+            defaults.set(Utilities.generatePasswd(), forKey: "guidedPasswd");
+            UIView.animate(withDuration: 0.5, animations: {
+                self.newGuidedPwButton.alpha = 0;
+            }, completion: { (finished : Bool) in
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.newGuidedPwButton.setTitle(self.defaults.string(forKey: "guidedPasswd"), for: .normal);
+                    self.newGuidedPwButton.alpha = 1;
+                })
+            })
+        }
+        else
+        {
+            let alert = UIAlertController(title: "Unable to Generate", message: "Guided Access is currently being enabled. To generate a new password, disable Guided Access first.", preferredStyle: .alert);
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil));
+            self.present(alert, animated: true);
+        }
+    }
     
     @IBAction func displayDateOnClick(_ sender: Any) {
         defaults.set(!defaults.bool(forKey: "isShowDate"), forKey: "isShowDate");

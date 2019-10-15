@@ -10,9 +10,18 @@ import UIKit
 
 class DebugViewController: UIViewController {
 
+    @IBOutlet weak var L1: UILabel!
+    @IBOutlet weak var L2: UILabel!
+    @IBOutlet weak var L3: UILabel!
+    @IBOutlet weak var L4: UILabel!
+    @IBOutlet weak var L5: UILabel!
+    @IBOutlet weak var L6: UILabel!
+    @IBOutlet weak var L7: UILabel!
+    @IBOutlet weak var L8: UILabel!
+    let defaults = UserDefaults.standard;
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        L1.text = "guidedPasswd: " + defaults.string(forKey: "guidedPasswd")!;
         // Do any additional setup after loading the view.
     }
     
