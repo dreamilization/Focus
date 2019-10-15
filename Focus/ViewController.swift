@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         }
         if(UserDefaults.standard.bool(forKey: "launchedBefore"))
         {
+            UserDefaults.standard.set(UserDefaults.standard.integer(forKey: "launchedTimes") + 1, forKey: "launchedTimes");
             let main = self.storyboard?.instantiateViewController(withIdentifier: "MainSceneViewController") as! MainSceneViewController;
             UIView.animate(withDuration: 0.75, animations: {
                 self.splashWelcome.alpha = 1;
