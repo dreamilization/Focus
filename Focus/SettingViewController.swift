@@ -10,11 +10,13 @@ import UIKit
 
 class SettingViewController: UIViewController {
     
+    @IBOutlet var lpgRecognizer: UILongPressGestureRecognizer!
     @IBOutlet weak var versionLabel: UILabel!
     @IBOutlet weak var displayDateButton: UIButton!
     @IBOutlet weak var timeFormatButton: UIButton!
     @IBOutlet weak var colorButton: UIButton!
     @IBOutlet weak var displayTutorialButton: UIButton!
+    @IBOutlet weak var internalSettingsButton: UIButton!
     let defaults = UserDefaults.standard;
     
     override var prefersStatusBarHidden: Bool {
@@ -38,6 +40,16 @@ class SettingViewController: UIViewController {
         displayDateButton.setTitle(isShowDate ? "Displaying Date" : "Not Displaying Date", for: .normal);
         let verNum = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String;
         versionLabel.text = "Ver: " + (verNum ?? "N/A");
+    }
+    
+    
+    @IBAction func showInternalScreen(_ sender: UILongPressGestureRecognizer) {
+        if(sender.state == .began)
+        {
+            let alphaVar = internalSettingsButton.alpha;
+            internalSettingsButton.alpha = alphaVar == 1 ? 0 : 1;
+            internalSettingsButton.isEnabled = alphaVar == 1 ? false : true;
+        }
     }
     
     

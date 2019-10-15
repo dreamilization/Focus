@@ -1,5 +1,5 @@
 //
-//  TipsViewController.swift
+//  DebugViewController.swift
 //  Focus
 //
 //  Created by William Wu on 10/15/19.
@@ -8,19 +8,11 @@
 
 import UIKit
 
-class TipsViewController: UIViewController {
+class DebugViewController: UIViewController {
 
-    override var prefersStatusBarHidden: Bool {
-        return true;
-    }
-    
-    override var prefersHomeIndicatorAutoHidden: Bool {
-        return true
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserDefaults.standard.set(false, forKey: "firstTimeLaunch");
+        
         // Do any additional setup after loading the view.
     }
     
