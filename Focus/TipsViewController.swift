@@ -12,6 +12,7 @@ class TipsViewController: UIViewController {
 
     @IBOutlet weak var titleDisplay: UILabel!
     @IBOutlet weak var welcomeMessage: UILabel!
+    @IBOutlet weak var tipsLabel: UILabel!
     @IBOutlet weak var otherLabel: UILabel!
     
     override var prefersStatusBarHidden: Bool {
@@ -24,6 +25,9 @@ class TipsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tipsLabel.adjustsFontSizeToFitWidth = true;
+        welcomeMessage.adjustsFontSizeToFitWidth = true;
         if(UserDefaults.standard.bool(forKey: "firstTimeLaunch"))
         {
             titleDisplay.text = "Welcome";

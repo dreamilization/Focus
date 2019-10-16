@@ -234,6 +234,7 @@ class MainSceneViewController: UIViewController {
                 util.writeToConfig();
                 let setting = self.storyboard?.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController;
                 timer?.invalidate();
+                setting.modalTransitionStyle = .flipHorizontal;
                 self.present(setting, animated: true, completion: nil);
             }
         }

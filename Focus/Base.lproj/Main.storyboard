@@ -174,7 +174,7 @@
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="22"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
-                                    <segue destination="GQF-Rd-biO" kind="presentation" modalTransitionStyle="coverVertical" id="amG-lZ-1Un"/>
+                                    <segue destination="GQF-Rd-biO" kind="presentation" modalTransitionStyle="flipHorizontal" id="amG-lZ-1Un"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGX-PE-aWp">
@@ -311,14 +311,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Your Preferred Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vd4-VE-Da2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Your Preferred Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="vd4-VE-Da2">
                                 <rect key="frame" x="33.666666666666657" y="379" width="347" height="28"/>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wiz-Za-fUD">
-                                <rect key="frame" x="70.666666666666686" y="453" width="73.000000000000014" height="40"/>
+                                <rect key="frame" x="70.666666666666671" y="453" width="73.000000000000014" height="40"/>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="24"/>
                                 <state key="normal" title="Black">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -394,28 +394,28 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Tips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5GQ-gL-gbX">
-                                                <rect key="frame" x="25" y="75" width="211" height="41"/>
+                                                <rect key="frame" x="15" y="75" width="211" height="41"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="35"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCW-nO-iCr">
-                                                <rect key="frame" x="25" y="161" width="379.33333333333331" height="167.66666666666663"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="rCW-nO-iCr">
+                                                <rect key="frame" x="15" y="161" width="357.66666666666669" height="167.66666666666663"/>
                                                 <string key="text">Nowadays we trend to spend more
 times with our phones than 
 anything else. Forcus is what we 
 want to present to you. By using
 Guided Access combined with a 
-random password, we hope you could 
-spend more time and focus on what
-you doing at the moment.</string>
+random password, we hope you 
+could spend more time and focus
+on what you doing.</string>
                                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="di6-dY-ONO">
-                                                <rect key="frame" x="25" y="358.66666666666674" width="347" height="503"/>
-                                                <mutableString key="text">1. Press to Show Preferences. 
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="24" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="di6-dY-ONO">
+                                                <rect key="frame" x="15" y="358.66666666666674" width="347" height="503"/>
+                                                <string key="text">1. Press to Show Preferences. 
 2. Double Tap to view generated 
    Guided Access Password.
  3. Tap on the Clock to switch    between Stopwatch and Clock
@@ -435,13 +435,13 @@ you doing at the moment.</string>
 ** Focus mode can only be 
    enabled by entering Guided
    Access mode. Manually enable
-   it is impossible currently. </mutableString>
+   it is impossible currently. </string>
                                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Features is Coming" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iv5-Bd-aFG">
-                                                <rect key="frame" x="24.999999999999986" y="891.66666666666663" width="238.66666666666663" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Features are Coming" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iv5-Bd-aFG">
+                                                <rect key="frame" x="15.000000000000014" y="891.66666666666663" width="249.33333333333337" height="21"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -467,7 +467,7 @@ you doing at the moment.</string>
                                             <constraint firstItem="ofo-9K-oa7" firstAttribute="bottom" secondItem="k3m-mT-dgG" secondAttribute="top" constant="-15" id="4vf-vF-sHs"/>
                                             <constraint firstItem="di6-dY-ONO" firstAttribute="leading" secondItem="rCW-nO-iCr" secondAttribute="leading" id="8AN-26-HMW"/>
                                             <constraint firstItem="f2G-GI-EUa" firstAttribute="top" secondItem="oOk-lW-8nB" secondAttribute="bottom" constant="-481" id="Bdv-Wi-dR0"/>
-                                            <constraint firstItem="5GQ-gL-gbX" firstAttribute="leading" secondItem="mxd-zZ-bhw" secondAttribute="leading" constant="25" id="NTZ-1W-XL2"/>
+                                            <constraint firstItem="5GQ-gL-gbX" firstAttribute="leading" secondItem="mxd-zZ-bhw" secondAttribute="leading" constant="15" id="NTZ-1W-XL2"/>
                                             <constraint firstItem="ofo-9K-oa7" firstAttribute="centerX" secondItem="mxd-zZ-bhw" secondAttribute="centerX" id="Vrk-qn-SlQ"/>
                                             <constraint firstItem="Iv5-Bd-aFG" firstAttribute="leading" secondItem="di6-dY-ONO" secondAttribute="leading" id="XIO-Cs-TsK"/>
                                             <constraint firstItem="5GQ-gL-gbX" firstAttribute="top" secondItem="mxd-zZ-bhw" secondAttribute="top" constant="75" id="ii3-rE-UmI"/>
@@ -510,6 +510,7 @@ you doing at the moment.</string>
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="otherLabel" destination="Iv5-Bd-aFG" id="GFm-Yx-Rwu"/>
+                        <outlet property="tipsLabel" destination="di6-dY-ONO" id="6Kg-c8-Mkv"/>
                         <outlet property="titleDisplay" destination="5GQ-gL-gbX" id="lQA-5k-LsP"/>
                         <outlet property="welcomeMessage" destination="rCW-nO-iCr" id="ruW-hM-NmQ"/>
                     </connections>
