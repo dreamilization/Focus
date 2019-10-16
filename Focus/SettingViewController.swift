@@ -16,6 +16,7 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var timeFormatButton: UIButton!
     @IBOutlet weak var colorButton: UIButton!
     @IBOutlet weak var newGuidedPwButton: UIButton!
+    @IBOutlet weak var totalTimeButton: UIButton!
     @IBOutlet weak var displayTutorialButton: UIButton!
     @IBOutlet weak var internalSettingsButton: UIButton!
     let defaults = UserDefaults.standard;
@@ -45,6 +46,15 @@ class SettingViewController: UIViewController {
         {
             newGuidedPwButton.setTitle("Reveal Password", for: .normal);
         }
+        let totalSec = defaults.integer(forKey: "focusedSec");
+        let hour = totalSec / 60 / 60;
+        let min = (totalSec - hour * 60) / 60
+        let sec = totalSec % 60;
+        let hourString = hour == 0 ? "" : String(hour);
+        let minString = min < 10 ? "0" + String(min) : String(min);
+        let secString = sec < 10 ? "0" + String(sec) : String(sec);
+        totalTimeButton.setTitle("Total Time: " + hourString + (hour == 0 ? "" : "H") + minString + "M" + secString + "S", for: .normal)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(guidedAccessChanged), name: UIAccessibility.guidedAccessStatusDidChangeNotification, object: nil);
     }
     

@@ -17,8 +17,7 @@ class MainSceneViewController: UIViewController {
     var isTWH = false;
     var isShowingPassword = false;
     var isFocus = false;
-    var isTimer = false;
-    var totalSec = 0;
+    let util = AppDelegate.util;
     let defaults = UserDefaults.standard;
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var infoDisplay: UILabel!
@@ -66,6 +65,7 @@ class MainSceneViewController: UIViewController {
         else
         {
             isFocus = false;
+            util.writeToConfig();
         }
     }
     
@@ -98,15 +98,15 @@ class MainSceneViewController: UIViewController {
         
         if(isFocus)
         {
-            totalSec += 1;
+            util.totalSec += 1;
         }
         
         
-        if(isTimer)
+        if(util.isTimer)
         {
-            let hour = totalSec / 60 / 60;
-            let min = (totalSec - hour * 60) / 60
-            let sec = totalSec % 60;
+            let hour = (util.sessionSec + util.totalSec) / 60 / 60;
+            let min = ((util.sessionSec + util.totalSec) - hour * 60) / 60
+            let sec = (util.sessionSec + util.totalSec) % 60;
             let hourString = hour == 0 ? "" : String(hour);
             let minString = min < 10 ? "0" + String(min) : String(min);
             let secString = sec < 10 ? "0" + String(sec) : String(sec);
@@ -208,12 +208,13 @@ class MainSceneViewController: UIViewController {
         
         if(sender.state == .ended)
         {
-            isTimer = !isTimer;
-            if(totalSec == 0 && !isFocus && isTimer)
+            util.isTimer = !util.isTimer;
+            mainLogic();
+            if(util.sessionSec == 0 && !isFocus && util.isTimer)
             {
                 displayInfo(title: "You Haven't Started Yet", detail: "Enter Guided Assess to Begin.")
             }
-            if(!isTimer)
+            if(!util.isTimer)
             {
                 hideInfo();
             }
@@ -230,7 +231,9 @@ class MainSceneViewController: UIViewController {
             }
             else
             {
+                util.writeToConfig();
                 let setting = self.storyboard?.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController;
+                timer?.invalidate();
                 self.present(setting, animated: true, completion: nil);
             }
         }

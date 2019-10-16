@@ -19,4 +19,19 @@ class Utilities {
         
         return rtn;
     }
+    
+    public var totalSec = 0;
+    
+    public var sessionSec = 0;
+    
+    public var isTimer = false;
+    
+    func writeToConfig()
+    {
+        let defaults = UserDefaults.standard;
+        let curr = defaults.integer(forKey: "focusedSec") + totalSec;
+        defaults.set(curr, forKey: "focusedSec");
+        sessionSec += totalSec;
+        totalSec = 0;
+    }
 }

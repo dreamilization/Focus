@@ -79,7 +79,7 @@ class SetupViewController: UIViewController {
     func completeSetup() {
         defaults.set(true, forKey: "launchedBefore");
         defaults.set(true, forKey: "firstTimeLaunch");
-        defaults.set(0, forKey: "focusedMin");
+        defaults.set(0, forKey: "focusedSec");
         defaults.set(1, forKey: "launchedTimes");
         defaults.set(Utilities.generatePasswd(), forKey: "guidedPasswd");
     }
