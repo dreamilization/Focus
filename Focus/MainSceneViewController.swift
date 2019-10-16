@@ -89,7 +89,7 @@ class MainSceneViewController: UIViewController {
         
         if(defaults.bool(forKey: "firstTimeLaunch"))
         {
-            firstHint.text = "Press to View Tips";
+            firstHint.text = "Press to View Welcome Message";
         }
         else
         {

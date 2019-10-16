@@ -32,6 +32,8 @@ class SetupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleDisplay.lineBreakMode = .byWordWrapping;
+        titleDisplay.numberOfLines = 3;
     }
     
     @IBAction func leftButtonOnClick(_ sender: Any) {

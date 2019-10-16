@@ -53,7 +53,7 @@ class SettingViewController: UIViewController {
         let hourString = hour == 0 ? "" : String(hour);
         let minString = min < 10 ? "0" + String(min) : String(min);
         let secString = sec < 10 ? "0" + String(sec) : String(sec);
-        totalTimeButton.setTitle("Total Time: " + hourString + (hour == 0 ? "" : "H") + minString + "M" + secString + "S", for: .normal)
+        totalTimeButton.setTitle("Total Time: " + hourString + (hour == 0 ? "" : "h ") + minString + "m " + secString + "s", for: .normal)
         
         NotificationCenter.default.addObserver(self, selector: #selector(guidedAccessChanged), name: UIAccessibility.guidedAccessStatusDidChangeNotification, object: nil);
     }

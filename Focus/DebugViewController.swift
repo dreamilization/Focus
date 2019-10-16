@@ -21,7 +21,15 @@ class DebugViewController: UIViewController {
     let defaults = UserDefaults.standard;
     override func viewDidLoad() {
         super.viewDidLoad()
-        L1.text = "guidedPasswd: " + defaults.string(forKey: "guidedPasswd")!;
+        let uiDevice = UIDevice.current;
+        L1.text = "Version: " + (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "N/A");
+        L2.text = uiDevice.systemName + " " + uiDevice.systemVersion + " ";
+        L3.text = "Model: " + uiDevice.model;
+        L4.text = "guidedPasswd: " + defaults.string(forKey: "guidedPasswd")!;
+        L5.text = "";
+        L6.text = "";
+        L7.text = "";
+        L8.text = "";
         // Do any additional setup after loading the view.
     }
     

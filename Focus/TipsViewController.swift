@@ -10,6 +10,10 @@ import UIKit
 
 class TipsViewController: UIViewController {
 
+    @IBOutlet weak var titleDisplay: UILabel!
+    @IBOutlet weak var welcomeMessage: UILabel!
+    @IBOutlet weak var otherLabel: UILabel!
+    
     override var prefersStatusBarHidden: Bool {
         return true;
     }
@@ -20,7 +24,16 @@ class TipsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserDefaults.standard.set(false, forKey: "firstTimeLaunch");
+        if(UserDefaults.standard.bool(forKey: "firstTimeLaunch"))
+        {
+            titleDisplay.text = "Welcome";
+            UserDefaults.standard.set(false, forKey: "firstTimeLaunch");
+            otherLabel.text = "";
+        }
+        else
+        {
+            welcomeMessage.text = "";
+        }
         // Do any additional setup after loading the view.
     }
     
