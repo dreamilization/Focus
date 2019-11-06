@@ -9,7 +9,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: MoveIn
-      run: cd Focus
     - name: Build
-      run: swift build -v
+      run: cd Focus && swift build -v
