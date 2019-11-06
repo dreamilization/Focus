@@ -45,6 +45,7 @@
 		99280F3A2356205600104DED /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		99280F3C2356236400104DED /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		99280F3E2356295000104DED /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
+		995EA97E2357B06D0032E099 /* Forcus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forcus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99CF98C32354165C00183FF6 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		99E7FD372354F55C00A6016E /* MainSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneViewController.swift; sourceTree = "<group>"; };
 		99E7FD392354F57200A6016E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -60,9 +61,8 @@
 		99F87BAA2353DA2300AF3B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99F87BB32353DA2300AF3B9C /* FocusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusUITests.swift; sourceTree = "<group>"; };
 		99F87BB52353DA2300AF3B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		99FC7A8E23559B0B00122F6E /* Forcus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forcus.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		99FC7A8F23559B0B00122F6E /* FocusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		99FC7A9023559B0B00122F6E /* FocusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99FC7A8F23559B0B00122F6E /* FocusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FocusTests.xctest; path = "/Users/williamwu/Development/Focus/build/Debug-iphoneos/FocusTests.xctest"; sourceTree = "<absolute>"; };
+		99FC7A9023559B0B00122F6E /* FocusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FocusUITests.xctest; path = "/Users/williamwu/Development/Focus/build/Debug-iphoneos/FocusUITests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +96,7 @@
 				99F87B8D2353DA2200AF3B9C /* Focus */,
 				99F87BA72353DA2300AF3B9C /* FocusTests */,
 				99F87BB22353DA2300AF3B9C /* FocusUITests */,
-				99FC7A8E23559B0B00122F6E /* Forcus.app */,
-				99FC7A8F23559B0B00122F6E /* FocusTests.xctest */,
-				99FC7A9023559B0B00122F6E /* FocusUITests.xctest */,
+				995EA97E2357B06D0032E099 /* Forcus.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,7 +156,7 @@
 			);
 			name = Focus;
 			productName = Focus;
-			productReference = 99FC7A8E23559B0B00122F6E /* Forcus.app */;
+			productReference = 995EA97E2357B06D0032E099 /* Forcus.app */;
 			productType = "com.apple.product-type.application";
 		};
 		99F87BA32353DA2300AF3B9C /* FocusTests */ = {
@@ -455,7 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 108;
+				CURRENT_PROJECT_VERSION = 113;
 				DEVELOPMENT_TEAM = MCZ29D9Z9V;
 				INFOPLIST_FILE = Focus/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -463,7 +461,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = org.projp.Focus;
 				PRODUCT_NAME = Forcus;
 				SWIFT_VERSION = 5.0;
@@ -476,7 +474,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 108;
+				CURRENT_PROJECT_VERSION = 113;
 				DEVELOPMENT_TEAM = MCZ29D9Z9V;
 				INFOPLIST_FILE = Focus/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -484,7 +482,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = org.projp.Focus;
 				PRODUCT_NAME = Forcus;
 				SWIFT_VERSION = 5.0;
