@@ -1,6 +1,6 @@
 # Focus
 
-![Action Status](https://github.com/dreamilization/Focus/workflows/Build/badge.svg)
+![Action Status](https://github.com/dreamilization/Focus/workflows/Swift/badge.svg)
 
 An experimental project for creating an app on iOS.
 
