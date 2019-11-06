@@ -1,5 +1,7 @@
 # Focus
 
+![Action Status](https://github.com/dreamilization/Focus/workflows/Build/badge.svg)
+
 An experimental project for creating an app on iOS.
 
 By taking advantage of Guided Access on iOS, I made this app try to keep users away from checking their phones constantly.
